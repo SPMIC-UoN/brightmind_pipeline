@@ -35,29 +35,29 @@ The following calls to BRC Pipeline were used in the BRIGhTMIND study:
 
 		struc_preproc.sh --input <path_to_T1w_nifti> \
 		                 --path <brc_output_path> \
-				 --subject <subject id> \
-				 --strongbias \
-				 --nodefacing
+		                 --subject <subject id> \
+		                 --strongbias \
+		                 --nodefacing
 	
 * Functional pipeline
 
 		fMRI_preproc.sh --fmripath <path_to_rsfMRI_nifti> \
 		                --path <brc_output_path> \
-				--subject <subject id> \
-				--mctype MCFLIRT6 \
-				--dcmethod TOPUP \
-				--slice2vol \
-				--slspec <dcm2niix_json_file_for_rsfMRI> \
-				--fwhm 5 \
-				--echospacing <effective_echo_spacing_of_acquisition> \
-				--stcmethod 1 \
-				--SEPhasePos <path_to_rsfMRI_anterior_to_posterior_blip_nifti> \
-				--SEPhaseNeg <path_to_rsfMRI_posterior_to_anterior_blip_nifti> \
-				--unwarpdir y- \
-				--biascorrection SEBASED \
-				--echodiff NONE \
-				--fmapmag NONE \
-				--tempfilter 100
+		                --subject <subject id> \
+		                --mctype MCFLIRT6 \
+		                --dcmethod TOPUP \
+		                --slice2vol \
+		                --slspec <dcm2niix_json_file_for_rsfMRI> \
+		                --fwhm 5 \
+		                --echospacing <effective_echo_spacing_of_acquisition> \
+		                --stcmethod 1 \
+		                --SEPhasePos <path_to_rsfMRI_anterior_to_posterior_blip_nifti> \
+		                --SEPhaseNeg <path_to_rsfMRI_posterior_to_anterior_blip_nifti> \
+		                --unwarpdir y- \
+		                --biascorrection SEBASED \
+		                --echodiff NONE \
+		                --fmapmag NONE \
+		                --tempfilter 100
 						
 -----
 
@@ -130,6 +130,6 @@ After the pipeline is run, the resulting GIFTI mesh `<brc_output_path>/<subject 
 
 If the threshold number is set too low, the resulting scalp mesh may become too noisy like in this example:
 
-![Rough Scalp Mesh](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/scalp_rough.png)
+![Rough Scalp Mesh](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/scalp_rough.png)
 
 If the threshold number is set too high, the resulting scalp mesh may be not complete and have holes in it.
