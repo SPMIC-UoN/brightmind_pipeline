@@ -16,7 +16,7 @@ The BRIGhTMIND Trial Processing Pipeline has the following software requirements
 1. A 64-bit Linux Operating System
 
 2. [BRC Pipeline](https://github.com/SPMIC-UoN/BRC_Pipeline). During the trial, version [1.2.6](https://github.com/SPMIC-UoN/BRC_Pipeline/releases/tag/v1.2.6) was used and therefore is the version that should be used to replicate results.
- - The BRC Pipeline has also its own software requirements.
+	* The BRC Pipeline has also its own software requirements.
 
 3. MATLAB R2017b or later.
 
@@ -33,31 +33,31 @@ The following calls to BRC Pipeline were used in the BRIGhTMIND study:
 
 * Structural pipeline
 
-		struc_preproc.sh --input <path_to_T1w_nifti> \\
-		                 --path <brc_output_path> \\
-						 --subject <subject id> \\
-						 --strongbias \\
-						 --nodefacing
+		struc_preproc.sh --input <path_to_T1w_nifti> \
+		                 --path <brc_output_path> \
+				 --subject <subject id> \
+				 --strongbias \
+				 --nodefacing
 	
 * Functional pipeline
 
-		fMRI_preproc.sh --fmripath <path_to_rsfMRI_nifti> \\
-		                --path <brc_output_path> \\
-						--subject <subject id> \\
-						--mctype MCFLIRT6 \\
-						--dcmethod TOPUP \\
-						--slice2vol \\
-						--slspec <dcm2niix_json_file_for_rsfMRI> \\
-						--fwhm 5 \\
-						--echospacing <effective_echo_spacing_of_acquisition> \\
-						--stcmethod 1 \\
-						--SEPhasePos <path_to_rsfMRI_anterior_to_posterior_blip_nifti> \\
-						--SEPhaseNeg <path_to_rsfMRI_posterior_to_anterior_blip_nifti> \\
-						--unwarpdir y- \\
-						--biascorrection SEBASED \\
-						--echodiff NONE \\
-						--fmapmag NONE \\
-						--tempfilter 100
+		fMRI_preproc.sh --fmripath <path_to_rsfMRI_nifti> \
+		                --path <brc_output_path> \
+				--subject <subject id> \
+				--mctype MCFLIRT6 \
+				--dcmethod TOPUP \
+				--slice2vol \
+				--slspec <dcm2niix_json_file_for_rsfMRI> \
+				--fwhm 5 \
+				--echospacing <effective_echo_spacing_of_acquisition> \
+				--stcmethod 1 \
+				--SEPhasePos <path_to_rsfMRI_anterior_to_posterior_blip_nifti> \
+				--SEPhaseNeg <path_to_rsfMRI_posterior_to_anterior_blip_nifti> \
+				--unwarpdir y- \
+				--biascorrection SEBASED \
+				--echodiff NONE \
+				--fmapmag NONE \
+				--tempfilter 100
 						
 -----
 
@@ -89,25 +89,25 @@ The BRIGhTMIND processing pipeline requires as input a text file with the locati
 
 Locate the nasion as shown in the image below and take note of the X, Y and Z coordinates **in mm**
 
-![Nasion Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/nasion_landmark.png.png)
+![Nasion Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/nasion_landmark.png)
 
 ### Location of the left preauricular point
 
 Locate the left preauricular point as shown in the image below and take note of the X, Y and Z coordinates **in mm**
 
-![Left Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/left_preauricular_landmark.png)
+![Left Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/left_preauricular_landmark.png)
 
 ### Location of the right preauricular point
 
 Locate the right preauricular point as shown in the image below and take note of the X, Y and Z coordinates **in mm**
 
-![Right Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/right_preauricular_landmark.png)
+![Right Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/right_preauricular_landmark.png)
 
 ### Landmark File
 
 The final landmark file should look like the image below. The first line corresponds to the nasion coordinates, the second line to the left preauricular point coordinates and the third line to the right preauricular point coordinates.
 
-![Landmark Coordinates](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/landmark_coords.png)
+![Landmark Coordinates](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/landmark_coords.png)
 
 -----
 
@@ -120,13 +120,13 @@ Another mandatory input to the BRIGhTMIND pipeline is an integer number defining
 
 2. Window the image by lowering the maximum intensity, such that the skull/scalp has a clear boundary with the background, but at the same time there is not too much noise near the skull/scalp like in the example below:
 
-	![Background Threshold Setting](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/background_thresh_setting.png)
+	![Background Threshold Setting](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/background_thresh_setting.png)
 	
 3. The maximum intensity selected is the number to input into the script.
 
 After the pipeline is run, the resulting GIFTI mesh `<brc_output_path>/<subject id>/surf/lh.seghead.surf.gii` should look smooth and complete like in the example below:
 
-![Smooth Scalp Mesh](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/master/img/scalp_smooth.png)
+![Smooth Scalp Mesh](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/scalp_smooth.png)
 
 If the threshold number is set too low, the resulting scalp mesh may become too noisy like in this example:
 
