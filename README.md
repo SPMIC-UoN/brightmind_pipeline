@@ -31,34 +31,38 @@ Before running this script, the structural and resting-state fMRI datasets of th
 
 The following calls to BRC Pipeline were used in the BRIGhTMIND study:
 
-* Structural pipeline
-
-		struc_preproc.sh --input <path_to_T1w_nifti> \
-		                 --path <brc_output_path> \
-		                 --subject <subject id> \
-		                 --strongbias \
-		                 --nodefacing
+* Structural pipeline (replace italicised parameters with actual values according to your data)
+  
+<pre>
+struc_preproc.sh --input <em>&lt;path_to_T1w_nifti&gt;</em> \
+		 --path <em>&lt;brc_output_path&gt;</em> \
+		 --subject <em>&lt;subject id&gt;</em> \
+		 --strongbias \
+		 --nodefacing
+</pre>
 	
-* Functional pipeline
+* Functional pipeline (replace italicised parameters with actual values according to your data)
 
-		fMRI_preproc.sh --fmripath <path_to_rsfMRI_nifti> \
-		                --path <brc_output_path> \
-		                --subject <subject id> \
-		                --mctype MCFLIRT6 \
-		                --dcmethod TOPUP \
-		                --slice2vol \
-		                --slspec <dcm2niix_json_file_for_rsfMRI> \
-		                --fwhm 5 \
-		                --echospacing <effective_echo_spacing_of_acquisition> \
-		                --stcmethod 1 \
-		                --SEPhasePos <path_to_rsfMRI_anterior_to_posterior_blip_nifti> \
-		                --SEPhaseNeg <path_to_rsfMRI_posterior_to_anterior_blip_nifti> \
-		                --unwarpdir y- \
-		                --biascorrection SEBASED \
-		                --echodiff NONE \
-		                --fmapmag NONE \
-		                --tempfilter 100
-						
+<pre>
+fMRI_preproc.sh --fmripath <em>&lt;path_to_rsfMRI_nifti&gt;</em> \
+		--path <em>&lt;brc_output_path&gt;</em> \
+		--subject <em>&lt;subject id&gt;</em> \
+		--mctype MCFLIRT6 \
+		--dcmethod TOPUP \
+		--slice2vol \
+		--slspec <em>&lt;dcm2niix_json_file_for_rsfMRI&gt;</em> \
+		--fwhm 5 \
+		--echospacing <em>&lt;effective_echo_spacing_of_acquisition&gt;</em> \
+		--stcmethod 1 \
+		--SEPhasePos <em>&lt;path_to_rsfMRI_anterior_to_posterior_blip_nifti&gt;</em> \
+		--SEPhaseNeg <em>&lt;path_to_rsfMRI_posterior_to_anterior_blip_nifti&gt;</em> \
+		--unwarpdir y- \
+		--biascorrection SEBASED \
+		--echodiff NONE \
+		--fmapmag NONE \
+		--tempfilter 100
+</pre>
+
 -----
 
 The usage of run_brightmind_pipeline.sh is as follows:
