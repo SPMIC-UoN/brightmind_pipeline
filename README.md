@@ -91,17 +91,11 @@ Locate the nasion as shown in the image below and take note of the X, Y and Z co
 
 ![Nasion Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/nasion_landmark.png)
 
-### Location of the left preauricular point
+### Location of the left/right preauricular points
 
-Locate the left preauricular point as shown in the image below and take note of the X, Y and Z coordinates **in mm**
+Locate the left/right preauricular points as shown in the image below and take note of the X, Y and Z coordinates **in mm**
 
-![Left Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/left_preauricular_landmark.png)
-
-### Location of the right preauricular point
-
-Locate the right preauricular point as shown in the image below and take note of the X, Y and Z coordinates **in mm**
-
-![Right Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/right_preauricular_landmark.png)
+![Preauricular Landmark](https://github.com/SPMIC-UoN/brightmind_pipeline/blob/main/img/preauricular_landmark.png)
 
 ### Landmark File
 
