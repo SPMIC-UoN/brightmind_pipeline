@@ -6,7 +6,7 @@
 * [Script Usage](#script-usage)
 * [Landmark Definition](#landmark-definition)
 * [Background Threshold Definition](#background-threshold-definition)
-* [Register Participant and Target in Stimguide™](#register-participant-and-target-in-stimguide)
+* [Register Participant and Target in StimGuide™](#register-participant-and-target-in-stimguide)
 
 
 <a id="prerequisities"></a>
@@ -134,11 +134,11 @@ If the threshold number is set too low, the resulting scalp mesh may become too 
 If the threshold number is set too high, the resulting scalp mesh may be not complete and have holes in it.
 
 <a id="register-participant-and-target-in-stimguide"></a>
-## Register Participant and Target in Stimguide™
+## Register Participant and Target in StimGuide™
 
-* Open Stimguide™
+* Open StimGuide™
 * Register a new patient by clicking on "Register New Patient" and typing the same Subject ID used for the pipeline as Patient Identifier
-* Close Stimguide™
-* Create a "Targets" folder inside `Documents\EzGuide\Studies\<subject id>\`, where the "Documents" folder correspond to the Microsoft Windows "Document" folder of the user installed on the Stimguide™ computer.
+* Close StimGuide™
+* Create a "Targets" folder inside `Documents\EzGuide\Studies\<subject id>\`, where the "Documents" folder correspond to the Microsoft Windows "Documents" folder of the user installed on the StimGuide™ computer.
 * Find the pipeline output folder (by default `<brc_output_path>/<subject id>/StimGuide`) and copy the ZIP file corresponding to the treatment arm you would like to use (rTMS or cgiTBS) to a USB stick or similar.
-* Plug the USB stick on the Stimguide™ computer and unzip the contents of the ZIP file (one `.asc` and one `.xml` file) into `Documents\EzGuide\Studies\<subject id>\Targets`.
+* Plug the USB stick on the StimGuide™ computer and unzip the contents of the ZIP file (one `.asc` and one `.xml` file) into `Documents\EzGuide\Studies\<subject id>\Targets`.
